@@ -22,6 +22,7 @@ const Login = () => {
   const redirect = sp.get("redirect") || "/";
 
   useEffect(() => {
+    console.log("userInfo:", userInfo);
     if (userInfo) {
       navigate(redirect);
     }

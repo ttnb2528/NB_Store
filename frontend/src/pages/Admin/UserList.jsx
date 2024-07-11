@@ -90,7 +90,7 @@ const UserList = () => {
                           type="text"
                           value={editTableUsername}
                           onChange={(e) => setEditTableUsername(e.target.value)}
-                          className="w-full p-2 border rounded-lg"
+                          className="w-full p-2 border rounded-lg text-black"
                         />
                         <button
                           onClick={() => updateHandler(user._id)}
@@ -118,13 +118,13 @@ const UserList = () => {
                       <div className="flex items-center">
                         <input
                           type="text"
-                          value={createEntityAdapter}
-                          onChange={(e) => setEditTableEmail(e.target / value)}
-                          className="w-full p-2 border rounded-lg"
+                          value={editTableEmail}
+                          onChange={(e) => setEditTableEmail(e.target.value)}
+                          className="w-full p-2 border rounded-lg text-black"
                         />
                         <button
-                          onChange={() => updateHandler(user._id)}
-                          className="ml-2 bg-blue-500 text-white py-2 px-44 rounded-lg"
+                          onClick={() => updateHandler(user._id)}
+                          className="ml-2 bg-blue-500 text-white py-2 px-4 rounded-lg"
                         >
                           <FaCheck />
                         </button>
