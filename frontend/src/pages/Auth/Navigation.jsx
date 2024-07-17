@@ -16,6 +16,7 @@ import { useLogoutMutation } from "../../Redux/api/user.api.js";
 import { logout } from "../../Redux/features/auth/authSlice.js";
 
 const Navigation = () => {
+  // taken from the authSlice
   const { userInfo } = useSelector((state) => state.auth);
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
