@@ -7,6 +7,7 @@ import {
 
 import { useFetchCategoriesQuery } from "../../Redux/api/category.api.js";
 import { toast } from "react-toastify";
+import AdminMenu from "./AdminMenu.jsx";
 
 const ProductList = () => {
   const [image, setImage] = useState("");
@@ -55,15 +56,15 @@ const ProductList = () => {
 
       const { data } = await createProduct(productData);
 
-    //   console.log(data);
+      //   console.log(data);
 
-        if (data.error) {
-          console.log(data.error);
-          toast.error("Product create failed. Try again.");
-        } else {
-          toast.success(`${data.name} is created`);
-          navigate("/");
-        }
+      if (data.error) {
+        console.log(data.error);
+        toast.error("Product create failed. Try again.");
+      } else {
+        toast.success(`${data.name} is created`);
+        navigate("/");
+      }
     } catch (error) {
       console.error(error);
       toast.error("Product create failed. Try again.");
@@ -73,7 +74,7 @@ const ProductList = () => {
   return (
     <div className="container xl:mx-[9rem] sm::mx-[0] text-white">
       <div className="flex flex-col md:flex-row">
-        {/* Admin Menu */}
+        <AdminMenu />
         <div className="md:w-3/4 p-3">
           <div className="h-12">Create Product</div>
 

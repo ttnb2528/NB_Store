@@ -10,6 +10,7 @@ import {
   useUpdateUserMutation,
 } from "../../Redux/api/user.api.js";
 import { createEntityAdapter } from "@reduxjs/toolkit";
+import AdminMenu from "./AdminMenu.jsx";
 
 const UserList = () => {
   const { data: users, refetch, isLoading, error } = useGetUsersQuery();
@@ -58,7 +59,6 @@ const UserList = () => {
 
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-semibold mb-4">Users</h1>
       {isLoading ? (
         <Loader />
       ) : error ? (
@@ -67,7 +67,7 @@ const UserList = () => {
         </Message>
       ) : (
         <div className="flex flex-col md:flex-row">
-          {/* Admin Menu */}
+          <AdminMenu />
           <table className="w-full md:w-4/5 mx-auto text-white">
             <thead>
               <tr>
