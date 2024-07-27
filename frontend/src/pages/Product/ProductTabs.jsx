@@ -5,7 +5,7 @@ import { useGetTopProductsQuery } from "../../Redux/api/product.api.js";
 import SmallProduct from "./SmallProduct.jsx";
 import Loader from "../../components/Loader.jsx";
 
-export const ProductTabs = ({
+const ProductTabs = ({
   loadingProductReview,
   userInfo,
   submitHandler,
@@ -161,3 +161,5 @@ export const ProductTabs = ({
     </div>
   );
 };
+
+export default ProductTabs;
